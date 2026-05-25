@@ -269,9 +269,9 @@ def main(args):
     s = '...'
     t = '...'
     source_data, source_label, target_data, target_label = load_dataset(s, t)
-    s = int(0.9*target_data.shape[0])
-    target_data_train, target_label_train = target_data[:s], target_label[:s]
-    target_data_test, target_label_test = target_data[s:], target_label[s:]
+    t1 = int(0.9*target_data.shape[0])
+    target_data_train, target_label_train = target_data[:t1], target_label[:t1]
+    target_data_test, target_label_test = target_data[t1:], target_label[t1:]
     k = 10
     _folder()   #create result folder
     '''split dataset and train'''
